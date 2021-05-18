@@ -1,5 +1,17 @@
+def add_function(first, second):
+    return first + second
+
+def sub_function(first, second):
+    return first - second
+
+def mul_function(first, second):
+    return first * second
+
+def div_function(first, second):
+    return first / second
+
 class Calculator:
-    
+
     def setdata(self, first, second):
         self.first = first
         self.second = second
@@ -17,10 +29,17 @@ class Calculator:
         return c.first / c.second
 
 if __name__ == '__main__':
-    c  = Calculator()
-    c.setdata(1, 2)
+    print(add_function(8, 2))
+    print(sub_function(8, 2))
+    print(mul_function(8, 2))
+    print(div_function(8, 2))
+    c = Calculator()
+    '''
+    
+    c.setdata(3, 6)
     print(c.sub())
     print(c.madd())
     print(c.ul())
     print(c.div())
 
+'''
