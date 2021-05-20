@@ -6,6 +6,7 @@ class Bmi(object):
     def __init__(self, height, weight):
         self.height = height
         self.weight = weight
+        
     '''
     고도 비만 : 35 이상
     중(重)도 비만 (2단계 비만) : 30 - 34.9
