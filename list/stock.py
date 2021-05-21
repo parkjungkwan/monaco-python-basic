@@ -32,7 +32,8 @@ class Stock(object):
                 ls.append(stock)
 
             elif menu == '4':
-                stock.del_element(ls, input('종목코드'))
+                stock = Stock(None, input('종목코드'))
+                stock.del_element(ls, stock.code)
             else :
                 print('Wrong Number')
                 continue
