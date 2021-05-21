@@ -7,14 +7,20 @@ class Account(object):
         self.name = name
         self.account_number = account_number
         self.money = money
+
+    def to_string(self):
+        return f'Bank Name: {self.BANK_NAME},' \
+               f' Name: {self.name},' \
+               f'Account Number: {self.account_number},' \
+               f' Money: {self.money}'
+
     '''
     계좌번호는 3자리-2자리-6자리 형태로 랜덤하게 생성됩니다.
     '''
 
     @staticmethod
     def create_account_number():
-        ls = []
-        [str(random.randint(0, 9)) for i in range(3)]
+        ls = [str(random.randint(0, 9)) for i in range(3)]
         for i in range(3):
             ls.append(str(random.randint(0, 9)))
         ls.append('-')
@@ -25,11 +31,7 @@ class Account(object):
             ls.append(str(random.randint(0, 9)))
         return "".join(ls)
 
-    def to_string(self):
-        return f'Bank Name: {self.BANK_NAME},' \
-               f' Name: {self.name},' \
-               f'Account Number: {self.account_number},' \
-               f' Money: {self.money}'
+
 
     @staticmethod
     def del_account(ls, account_number):
@@ -41,7 +43,7 @@ class Account(object):
     def main():
         ls = []
         while 1:
-            menu = input('0.종료 1.계좌개설 2.계좌목록 3.입금 4.출금 5.계좌탈퇴')
+            menu = input('0.종료 1.계좌개설 2.계좌내용 3.입금 4.출금 5.계좌탈퇴')
             if menu == '0':
                 break
             elif menu == '1':
